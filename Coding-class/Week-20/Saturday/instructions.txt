@@ -1,0 +1,206 @@
+# React Quiz
+
+In this activity, we will begin by installing a few helpful packages and then explore the React documentation to answer questions.
+
+## Instructions
+
+### Part 1
+
+* Begin installing both the Create React App and Yarn packages globally by running the following command in your terminal:
+
+`npm install -g create-react-app yarn`
+
+### Part 2
+
+* While those are installing, work with your group to answer each of the following questions using the [ReactJS Documentation](https://facebook.github.io/react/):
+
+1. In the previous section we just installed two packages, Create React App and Yarn. What are they for?
+
+2. What are some benefits of using ReactJS?
+
+3. What is a React component? Hint: Check the "Components and Props" section of the React documentation.
+
+4. What is the significance of the `ReactDOM.render` method? Hint: Check the "ReactDOM" section of the documentation.
+
+5. What is JSX? Why does Facebook recommend using it? Hint: Check the "Introducing JSX" section of the documentation.
+
+6. What does Facebook recommend as the “best way to start building a new React single page application”? Hint: Check the "Installation" section of the React documentation.
+
+7. What is Babel? And what role does it play in converting JSX into vanilla JavaScript? Hint: Check the "Introducing JSX" section of the documentation.
+
+8. What is the significance of { } curly braces in JSX? Hint: Check the "Introducing JSX" section of the documentation.
+
+9. What is a component prop? Hint: Check the "Components and Props" section of the React documentation.
+reactjs.org
+React - A JavaScript library for building user interfaces
+A JavaScript library for building user interfaces
+
+===================================================
+
+*Hello React*
+
+In this activity, we will dissect a simple React application.
+
+*Instructions*
+
+* If you haven't already, generate a starter React app using Create React App. You can do this by running `create-react-app reactpractice`. We will run all of the activity code today inside of this boilerplate, as to avoid constantly reinstalling the same node modules.
+
+* Once you have a `reactpractice` React app generated, delete the `src` folder inside of your starter app and replace it with the [src](Unsolved/src) provided with this activity.
+
+* Start the app by running `yarn start` in your terminal, take a moment to study the HTML code being rendered in the browser at [http://localhost:3000](http://localhost:3000).
+
+*HelloReact.js*
+
+* Then go into the `src` folder and with your partner, try to answer the following questions:
+
+ * What's happening inside of `src/components/HelloReact.js`? How does it relate to the content being rendered to the browser?
+
+   * The `HelloReact` function is an arrow function. Can you modify this function so it uses a regular function instead (one that uses the `function` keyword)?
+
+*App.js*
+
+* Open the `src/App.js` file, what's going on in this file? Try to answer the following questions:
+
+ * What does the `App` function return?
+
+ * Why do we import the React library? We aren't using the React keyword anywhere. Is it possible to remove this and still have our code work?
+
+*index.js*
+
+* Open the `src/index.js` file and go over the code. Notice that we're importing the `ReactDOM` library. Try to answer the following questions:
+
+ * Do you remember what the purpose of `ReactDOM.render` is? What is it doing?
+
+ * Is this where our components are rendered to the DOM?
+
+ * Instead of splitting our files up into `App`, `components/HelloReact` and `index`, is it possible to just write our entire Hello World app in the `index.js` file?
+
+ =============================================
+
+ https://www.npmjs.com/package/react-create
+npm
+react-create
+Simple React CLI that aims to speed up development by generating desired React component markup based on your preferences via the command line.
+
+=============================================
+
+*Hello Div*
+
+In this activity, we will render a list of JSX elements inside of a div.
+
+*Instructions*
+
+* Replace the `src` folder of your React app with [src](Unsolved/src). Stop the dev server if it is already running. Start the app in dev mode by running `yarn start`.
+
+* Using the code in the [HelloDiv.js](Unsolved/src/components/HelloDiv.js) file as a starting point, update the `HelloDiv` function so that it returns the following JSX:
+
+ * A heading tag introducing yourself, e.g., `<h1>Hello! My name is <insert name here></h1>`.
+
+ * An unordered list containing at least 3 things you like (these can be anything).
+
+*Hints*
+
+* You will need to import the React library.
+
+* Reference the previous `HelloReact` activity if you get stuck with any syntax.
+
+* If you're trying to render multiple JSX tags from a single component, you should enclose all of the JSX tags within a single parent tag, such as a `div`.
+
+========================================
+
+*05-Stu_HelloBootstrap*
+
+In this activity, we will utilize Bootstrap CSS and render components utilizing Bootstrap classes.
+
+*Instructions*
+
+* Replace your application's `src` folder with Unsolved/src. Stop the dev server if it is already running. Start the app in dev mode by running `yarn start`.
+
+* Add a Bootstrap CDN to the head of your React application's `index.html` file inside `public/index.html`.
+
+```html
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css"/>```
+
+* Inside of the `src/components` folder, create a brand new file named `HelloBootstrap.js`. Add code to this file to accomplish the following:
+
+ * It should render a Bootstrap Navbar: https://getbootstrap.com/docs/4.0/components/navbar/ , followed by a Bootstrap Jumbotron: https://getbootstrap.com/docs/4.0/components/jumbotron/ , and lastly a Bootstrap Card: https://getbootstrap.com/docs/4.0/components/card/.
+
+ * Set the default export of this file to be your `HelloBootstrap` component.
+
+* Update the `src/App.js` file so that it imports the `src/components/HelloBootstrap.js` file. Render the `HelloBootstrap` component instead of the paragraph that is currently being rendered.
+
+*Hints*
+
+* In order to return separate JSX elements from a function, all of the higher level elements need a single parent, e.g., usually a `div`.
+
+* All JSX tags must either have an adjacent tag or else have a self-closing forward slash.
+
+* `className` must be used to describe an element's `class` property since `class` is a reserved word in JavaScript.
+
+* Remember to import the `react` library in any file where JSX is utilized. Inspect some of the other files provided with the starter code if you're having difficulty remembering the syntax for this.
+
+*Bonus*
+
+* Instead of having all of your Bootstrap code inside of a single component, create three separate components for the Navbar, Jumbotron, and Card. Render these components inside of the App component.
+
+=====================================
+
+*07-Stu_JSXVariables Instructions*
+
+* Replace your React application's `src` folder with [Unsolved/src](Unsolved/src). Stop the dev server if it is already running. Start the app in dev mode by running `yarn start`.
+
+* This activity uses Bootstrap, so make sure you have the CDN added to your `public/index.html` file.
+
+```html
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css"/>```
+
+* Open `src/components/JSXVariables.js` and notice the values being requested inside of the component:
+
+ * Your name
+
+ * The number of letters in your name
+
+ * What you think about React
+
+* Render each value inside of JSX curly braces. You will need to create JavaScript variables in order to accomplish this.
+
+*Bonus*s
+
+* Add another heading that says "My name without any vowels is: <insert name without vowels here>". Create a function that takes a string as a parameter and returns the string with the vowels removed. Run this function inside of JSX curly braces to complete the statement.
+
+===================================
+
+*09-Stu_StyleProp*
+
+In this activity we will explore some built-in options for styling React components.
+
+*Instructions*
+
+* Replace your React application's `src` folder with [Unsolved/src](Unsolved/src). Stop the dev server if it is already running. Start the app in dev mode by running `yarn start`.
+
+* Open (http://localhost:3000) in your web browser and take a moment to study the rendered application.
+
+ ![Initial Page](Images/01-InitialPage.png)
+
+* This application consists of three main components:
+
+ * `Header`
+
+ * `Navbar`
+
+ * `Section`
+
+* Each component is styled using imported external stylesheets.
+
+* Using only inline styles, and without altering any of the CSS files, update each component so the rendered page looks like this:
+
+ ![Inline Styled Page](Images/02-InlineStyled.png)
+
+*Hints*
+
+* Check out the [React documentation for the style attribute](https://facebook.github.io/react/docs/dom-elements.html#style)
+
+* Check out the [Inline CSS Section of the React Enlightenment Book](https://www.reactenlightenment.com/react-jsx/5.6.html)
+
+========================================
+

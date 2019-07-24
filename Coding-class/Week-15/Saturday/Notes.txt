@@ -1,0 +1,23 @@
+Andrew Klatzke [12:23 PM]
+TutsPlus: Refresher on Joins, and Entity Relations
+
+https://code.tutsplus.com/articles/sql-for-beginners-part-3-database-relationships--net-8561
+
+Wikipedia: Dry descriptions of what they each are:
+
+https://en.wikipedia.org/wiki/Entity%E2%80%93relationship_model
+https://en.wikipedia.org/wiki/Many-to-many_(data_model)
+https://en.wikipedia.org/wiki/One-to-many_(data_model)
+https://en.wikipedia.org/wiki/One-to-one_(data_model)
+
+Explanation of relationship between one to many and many to one:
+
+https://stackoverflow.com/questions/4601703/difference-between-one-to-many-and-many-to-one-relationship
+
+Sequelize Docs on Associations (Note that even they refer to it as magic):
+
+http://docs.sequelizejs.com/manual/tutorial/associations.html
+
+A concise SO thread that explains the hasMany/belongsToMany relationship:
+
+https://stackoverflow.com/questions/20290815/belongsto-vs-hasmany-in-sequelize-js

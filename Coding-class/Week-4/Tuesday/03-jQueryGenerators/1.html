@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Basic jQuery Dump</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+<div class="myClass">a</div>
+<div class="myClass">b</div>
+<div class="myClass">c</div>
+  <!-- Created an empty HTML div. Note that there is no content -->
+  <div id="empty-div"></div>
+
+  <script type="text/javascript">
+
+    // Thanks to jQuery's handy $ selector ... we have a wealth of new methods for selecting and manipulating HTML.
+
+    // Here we are using jQuery's .HTML method to instantly select and change the contents of our empty-div.
+    $("#empty-div").html("<h1>Hello friends!</h1>");
+
+    // We can just as easily append a new line using a similarly simple .append method.
+    $("#empty-div").append("A pleasure to meet you!");
+   var myClass = document.querySelectorAll(".myClass");
+  console.log( myClass ); 
+
+  var notMain = document.querySelector("#empty-div");
+
+   //notMain.innerHTML = "<h1>Where are you?</h1>"; 
+
+  var myNewClass =  document.createElement("div");
+  myNewClass.innerHTML = "<h1>How are you???</h1>";
+  myNewClass.className = "my-new-class";
+
+  notMain.appendChild( myNewClass );       
+
+  </script>
+          
+</body>
+</html>

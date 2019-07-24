@@ -1,0 +1,41 @@
+*10-Test-Drive-Multiply Test*
+
+In this activity we will write tests for the `multiply` function we worked with previously, and use Karma to watch our code as it is changed.
+
+*Instructions*
+
+* Using your Karma setup, write tests for the `multiply` function we met in our last class. Make sure to test that it handles errors properly.
+
+* After you've written tests describing the behavior of `multiply`, open a terminal and start Karma.
+
+* In another terminal, write your implementation for `multiply`. Notice that Karma executes your tests every time you change your implementation.
+\
+
+=======================================
+
+updated command:
+
+`npm i -D browserify chai karma karma-browserify karma-chrome-launcher karma-commonjs karma-mocha karma-mocha-reporter karma-requirejs mocha watchify requirejs`
+
+
+========================================
+
+*11-Page-Utilities Instructions*
+
+* Write a class that can do the following:
+
+ -- Keep track of how many blog posts a blog maintains on each page.
+
+ -- Keep track of how many blog posts the blog contains.
+
+ -- Determine how many posts are on page number `n`. It should behave sensibly if the blog does not have a page `n`.
+
+* Before implementing any of this functionality, develop a test suite with your partner describing the desired behaviors.
+
+*Hints*
+
+* You'll have to come up with method names too. Write some code that uses the object you're about to create. What seem like natural choices for the object and for its methods' names?
+
+
+==========================================
+

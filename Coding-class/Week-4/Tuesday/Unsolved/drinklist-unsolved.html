@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Content!</title>
+</head>
+<body>
+
+  <h1>Drink Selection!</h1>
+  <hr>
+
+  <!-- Here we create a generic drink-options div -->
+  <div id="drink-options"></div>
+  <script
+  src="http://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  <script type="text/javascript">
+
+    // Array holds all of the drinks available
+    var drinkList = [
+      "Coffee: $5",
+      "Espresso: $7",
+      "Cappuccino: $6",
+      "Latte: $4",
+      "Tea: $3",
+      "Ice Coffee: $6",
+      "Ice Espresso: $8",
+      "Ice Latte: $6",
+      "Ice Tea: $4"
+    ];
+
+    var drinkOptions = $("#drink-options");
+    $.each(drinkList, function(index, item){
+      drinkOptions.append( "<div class = 'dick'>" + item + "</div>");
+    });
+
+    $(".dick").on("click", function(event){
+      alert( $(this).text());
+    })
+
+    // 1. Create code that "grabs" the div with the matching id (#drink-options);
+    // ...
+   //var drinkOptions = document.querySelector("#drink-options");
+
+    //var drinkOptions = document.querySelector("#drink-options");
+
+    //for ( var i = 0; i < drinkList.length; i++ ) {
+    //  var myNewElement = document.createElement("new-div");
+
+     // myNewElement.innerHTML = drinkList[i];
+
+     // drinkOptions.appendChild(myNewElement);
+    //}
+    // ...
+
+
+    // 2. Create a for loop that creates HTML content of all the drinks using JavaScript.
+    // HINT: You will need to use each of the following methods: createElement, innerHTML, appendChild
+    // ..
+    //for (var i=0; i < drinkList.length; i++) {
+     // var 
+    
+    
+    //$(myNewElement).html("div");
+
+      //var drinkOptions = $("#drink-options");
+      //$.each(drinkList, function(index, item){
+       // drinkOptions.append("<div class = 'clickable'>" + item + "</div>");
+      //});
+
+      //$(".clickable").on("click", function(){
+      //alert( $(this).text())
+      //});
+    // ...
+
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+	<title>Reserve A Table</title>
+
+	<script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+</head>
+<body>
+	<div class="container">
+		<div class="jumbotron">
+			<h1 class= "text center">Hot Restaurant</h1>
+			<hr>
+			<h2>We Only Have 5 Tables! Book your seat before they are all gone!</h2>
+			<hr>
+			<a href="/"><button class="btn btn-danger btn-lg"><span class="glyphicon glyphicon-home"></span> Home</button></a>
+			<a href="/table"><button class="btn btn-danger btn-lg"><span class="glyphicon glyphicon-plus"></span> View Tables</button></a>
+		</div>
+	</div>
+	<div class="container">
+		<form>
+		  <div class="form-group">
+		    <label for="name">Name</label>
+		    <input type="name" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Enter name">
+		  </div>
+		  <div class="form-group">
+		    <label for="phoneNumber">Phone</label>
+		    <input type="phone" class="form-control" id="phoneNumber" placeholder="555-555-5555">
+		  </div>
+		  <div class="form-group">
+		    <label for="emailAddress">Email</label>
+		    <input type="email" class="form-control" id="emailAddress" placeholder="email@address.com">
+		  </div>
+		  <div class="form-group">
+		    <label for="uniqueID">Unique ID</label>
+		    <input type="text" class="form-control" id="uniqueID" placeholder="123abc">
+		  </div>
+		  <button type="submit" id="reserve-btn" class="btn btn-primary">Submit</button>
+		</form>
+	</div>
+	<div class="container-fluid" style="position: absolute; bottom: 0; left: 0">
+		<a href="/api/tableList" target="_blank">List of Tables</a>
+		|
+		<a href="/api/waitList" target="_blank">Wait List</a>
+	</div>
+
+	<script type="text/javascript">
+		$('#reserve-btn').on('click', e => {
+			e.preventDefault();
+			let newPatron = {
+				name: $('#name').val().trim(),
+				phone: $('#phoneNumber').val().trim(),
+				email: $('#emailAddress').val().trim()
+			};
+
+			$.get('/api/tableList', (data) => {
+				if(data.length >= 5) {
+					$.post('/api/waitList', newPatron).then( (data) => {
+						console.log(data);
+						alert("You're on the waitList");
+					})
+				} else {
+					$.post('/api/tableList', newPatron).then( (data) => {
+						console.log(data);
+						alert("You're table has been reserved");
+					})
+				}
+			})
+		});
+	</script>
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+</body>
+</html>

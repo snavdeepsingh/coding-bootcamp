@@ -1,0 +1,131 @@
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
+
+</head>
+<body></body>
+<div class="container">
+        <div class="jumbotron">
+                <h1 class="display-4">Employee Data Management</h1>
+                <h5>A comprehensive Directorey of Employee Billable Hours </h5>
+                
+              </div>
+</div>
+<div class="container">
+
+  <div class="card mb-3">
+        <div class="card-header bg-primary text-light">
+          <h5 class="m-0">Current Employees</h5>
+        </div>
+        <div class="card-body">
+          <table class="table mb-0">
+            <thead>
+            <tr>
+              <th scope="col">Employee Name</th>
+              <th scope="col">Role</th>
+              <th scope="col">Start Date</th>
+              <th scope="col">Months Worked</th>
+              <th scope="col">Monthly Rate ($)</th>
+              <th scope="col">Total Billed ($)</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <th scope="row">Mark Johnson</th>
+              <td>Contractor</td>
+              <td>12/24/2017</td>
+              <td>12</td>
+              <td>2</td>
+              <td>24</td>
+            </tr>
+            <tr>
+              <th scope="row">Mark Johnson</th>
+              <td>Contractor</td>
+              <td>12/24/2017</td>
+              <td>12</td>
+              <td>2</td>
+              <td>24</td>
+            </tr><tr>
+              <th scope="row">Mark Johnson</th>
+              <td>Contractor</td>
+              <td>12/24/2017</td>
+              <td>12</td>
+              <td>2</td>
+              <td>24</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+</div>
+<div class="container">
+        <div class="card">
+                <div class="card-header bg-primary text-light">
+                  <h5 class="m-0">Add Employee</h5>
+                </div>
+                <div class="card-body">
+        <form>
+                <fieldset disabled>
+                  <div class="form-group">
+                    <label for="disabledTextInput">Employee Name</label>
+                    <input type="text" id="disabledTextInput" class="form-control" placeholder="">
+                  </div>
+                  <div class="form-group">
+                        <label for="disabledTextInput">Role</label>
+                        <input type="text" id="disabledTextInput" class="form-control" placeholder="">
+                    </div>
+                    <div class="form-group">
+                            <label for="disabledTextInput">Start Date (DD/MM/YY - ex 01/01/89)</label>
+                            <input type="text" id="disabledTextInput" class="form-control" placeholder="">
+                          </div>
+                          <div class="form-group">
+                                <label for="disabledTextInput">Monthly Rate</label>
+                                <input type="text" id="disabledTextInput" class="form-control" placeholder="">
+                              </div>
+                  
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </fieldset>
+              </form>
+                </div>
+    
+</div>
+        
+
+  
+
+  <script>
+    
+
+    $(document).ready(function(){
+      // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyCU5EPXK-J-k5Y_i9QcZkH8DmjNALv5Y5U",
+      authDomain: "practice-3dd50.firebaseapp.com",
+      databaseURL: "https://practice-3dd50.firebaseio.com",
+      projectId: "practice-3dd50",
+      storageBucket: "practice-3dd50.appspot.com",
+      messagingSenderId: "256990837890"
+    };
+    firebase.initializeApp(config);
+
+
+    })
+
+    
+    
+  </script>
+</body>
+</html> 

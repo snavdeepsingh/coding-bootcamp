@@ -1,0 +1,36 @@
+*13-Warm-Up Instructions*
+
+* Your goal is to complete the routes in the server file so the site can display and edit the book data. Don't worry about the front end, just use MongoJS to finish the routes
+
+===========================
+
+http://mongoosejs.com/
+
+============================
+
+* Open the `userModel.js` file and complete the User Schema based on the specifications outlined in the file.
+
+* The only file you will need to modify is `userModel.js`.
+
+========================
+
+*17-Custom-Method-Exercise Instructions*
+
+1. Go to userModel.js, and create custom methods
+ based on the details offered in the file.
+
+2. Once you've made those custom methods, use them
+ in this file's POST request
+
+3. Good luck!
+
+================================
+
+19-Populate-Exercise Instructions
+* Open `server.js` and update the `/populate` route to return Users populated with notes as JSON to the client.
+
+=================================
+
+*20-Scraping-With-Mongoose Instructions*
+
+* Open `server.js` and complete the empty routes for accessing all articles, accessing a specific article, and for saving a new article.

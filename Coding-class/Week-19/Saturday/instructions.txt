@@ -1,0 +1,99 @@
+https://github.com/cheeriojs/cheerio
+
+
+db.animals.insert({
+  "name": "Jaguar",
+  "numLegs": 4,
+  "class": "mammal",
+  "weight": 200,
+  "whatIWouldReallyCallIt": "Billi"
+})
+
+
+db.animals.find({weight: {$gt: 300}}).sort({weight: 1}).pretty()
+
+=============================================================
+
+*06-Scrape-Starter Instructions*
+
+* Using the (Unsolved/server.js), the cheerio documentation, and what you've learned in class so far, scrape a website of your choice, save information from the page in a result array, and log it to the console
+
+
+=================================================================
+*07-Insert-Animals*
+
+"Sure being a coder is fun and all, but you know what’s better? Being a coder at a zoo. Using MongoDB, you're going to make a zoo database."
+
+*Instructions*
+
+Startup mongod and the mongo shell and switch to a new db named zoo.
+
+Insert into a collection named animals:
+One entry for each of your five favorite animals.
+
+Each entry should have
+1. A field of numLegs with an integer of the number of legs that animal has.
+2. A field of class with that animal's class (mammal, reptile, etc).
+3. A field of weight with an integer of the weight of the animal in pounds (any reasonable weight, really).
+4. A field of name, with the animal's name.
+5. A field of whatIWouldReallyCallIt with the name of what you would call the animal if you got to name it.
+
+Example:
+
+```{
+  "name": "Panda",
+  "numLegs": 4,
+  "class": "mammal",
+  "weight": 254,
+  "whatIWouldReallyCallIt": "Desiigner"
+}```
+
+
+==============================================================
+
+*09-MongoDB-and-Sorting Instructions*
+
+Review the two routes provided to you and speak with a partner about what the code is doing.
+
+1. Root: Displays a simple "Hello World" message (no mongo required).
+2. All: Send JSON response with all animals.
+
+Make two routes that display results from your zoo collection:
+
+1. Name: Send JSON response sorted by name in ascending order.
+2. Weight: Send JSON response sorted by weight in descending order.
+
+
+==============================================================
+
+*10-MongoJS-and-the-Front-End Instructions*
+
+1. Make a reusable function for creating a table body in index.html with the results from your MongoDB query. Each row should have info for one animal.
+
+2. Make two AJAX functions that fire when users click the two buttons on index.html.
+   
+  * When the user clicks the Weight button, the table should display the animal data sorted by weight.
+ 
+  * When the user clicks the Name button, the table should display the animal data sorted by name.
+
+* Good luck!
+
+*Hints*
+
+* We don't want to keep adding to the table with each button click. We only want to show the new results.
+What can we do to the table to accomplish this?
+
+
+=========================================================
+
+
+*11-Scraping-into-a-db Instructions*
+
+* Using the tools and techniques you learned so far,
+you will scrape a website of your choice, then place the data
+in a MongoDB database. Be sure to make the database and collection
+before running this exercise.
+
+*Hints*
+
+* Consult the assignment files from earlier in the class if you need a refresher on Cheerio.
